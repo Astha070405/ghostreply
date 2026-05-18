@@ -26,7 +26,7 @@ const [copiedIndex, setCopiedIndex] = useState(null);
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/reply/generate",
+        `${import.meta.env.VITE_API_URL}/api/reply/generate`,
         {
           message,
           tone
